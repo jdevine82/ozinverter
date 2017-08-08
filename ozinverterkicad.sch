@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ozinverterkicad-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ozinverterlib
+LIBS:ozinverterkicad-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -88,7 +90,7 @@ F 3 "" H 5725 4175 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D5
+L LED-RESCUE-ozinverterkicad D5
 U 1 1 57CA8B3C
 P 5725 4575
 F 0 "D5" H 5725 4675 50  0000 C CNN
@@ -139,7 +141,7 @@ U 1 1 57CA8E0F
 P 6275 3500
 F 0 "Y1" H 6275 3650 50  0000 C CNN
 F 1 "12MHZ Crystal" H 6200 3700 50  0000 C CNN
-F 2 "Crystals:Crystal_HC48-U_Vertical" H 6275 3500 50  0001 C CNN
+F 2 "Crystals:Crystal_HC49-U_Vertical" H 6275 3500 50  0001 C CNN
 F 3 "" H 6275 3500 50  0000 C CNN
 	1    6275 3500
 	0    1    1    0   
@@ -222,7 +224,7 @@ F 3 "" H 7275 3900 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L POT voltageout1
+L POT-RESCUE-ozinverterkicad voltageout1
 U 1 1 57CA98D3
 P 7450 4175
 F 0 "voltageout1" H 7450 4095 50  0000 C CNN
@@ -326,7 +328,7 @@ U 1 1 57CAA769
 P 9225 3700
 F 0 "C23" H 9250 3800 50  0000 L CNN
 F 1 "2uf" H 9250 3600 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 9263 3550 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Rect_L27_W11_P22" H 9263 3550 50  0001 C CNN
 F 3 "" H 9225 3700 50  0000 C CNN
 	1    9225 3700
 	1    0    0    -1  
@@ -387,7 +389,7 @@ F 3 "" H 6700 3050 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L POT RV1
+L POT-RESCUE-ozinverterkicad RV1
 U 1 1 57CAB4A0
 P 7000 2775
 F 0 "RV1" H 7000 2695 50  0000 C CNN
@@ -746,23 +748,23 @@ $EndComp
 $Comp
 L GND #PWR019
 U 1 1 57CB3A5E
-P 1500 7400
-F 0 "#PWR019" H 1500 7150 50  0001 C CNN
-F 1 "GND" H 1500 7250 50  0000 C CNN
-F 2 "" H 1500 7400 50  0000 C CNN
-F 3 "" H 1500 7400 50  0000 C CNN
-	1    1500 7400
+P 1100 6475
+F 0 "#PWR019" H 1100 6225 50  0001 C CNN
+F 1 "GND" H 1100 6325 50  0000 C CNN
+F 2 "" H 1100 6475 50  0000 C CNN
+F 3 "" H 1100 6475 50  0000 C CNN
+	1    1100 6475
 	1    0    0    -1  
 $EndComp
 $Comp
 L +48V #PWR020
 U 1 1 57CB3D96
-P 1375 6550
-F 0 "#PWR020" H 1375 6400 50  0001 C CNN
-F 1 "+48V" H 1375 6690 50  0000 C CNN
-F 2 "" H 1375 6550 50  0000 C CNN
-F 3 "" H 1375 6550 50  0000 C CNN
-	1    1375 6550
+P 1775 7575
+F 0 "#PWR020" H 1775 7425 50  0001 C CNN
+F 1 "+48V" H 1775 7715 50  0000 C CNN
+F 2 "" H 1775 7575 50  0000 C CNN
+F 3 "" H 1775 7575 50  0000 C CNN
+	1    1775 7575
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -994,7 +996,7 @@ Wire Wire Line
 Wire Wire Line
 	4975 4550 4975 4625
 Wire Wire Line
-	5025 4075 5025 3975
+	5025 3975 5025 4075
 Wire Wire Line
 	5125 3975 5125 4075
 Wire Wire Line
@@ -1078,7 +1080,7 @@ Connection ~ 7175 3175
 Wire Wire Line
 	7425 3500 7425 3900
 Wire Wire Line
-	7100 3900 7100 3525
+	7100 3525 7100 3900
 Wire Wire Line
 	7100 3525 7175 3525
 Connection ~ 7175 3525
@@ -1139,9 +1141,9 @@ Wire Wire Line
 Wire Wire Line
 	6250 2650 6475 2650
 Wire Wire Line
-	5975 3175 6475 3175
+	6475 3175 5975 3175
 Wire Wire Line
-	6475 3175 6475 2950
+	6475 2950 6475 3175
 Wire Wire Line
 	6475 3050 6550 3050
 Connection ~ 6475 3050
@@ -1190,11 +1192,11 @@ Connection ~ 7700 2850
 Wire Wire Line
 	6000 1725 6000 1775
 Wire Wire Line
-	5975 3075 6150 3075
+	6150 3075 5975 3075
 Wire Wire Line
-	6150 3075 6150 1425
+	6150 1425 6150 3075
 Wire Wire Line
-	6150 1425 6000 1425
+	6000 1425 6150 1425
 Connection ~ 6075 1425
 Wire Wire Line
 	5750 1400 6075 1400
@@ -1315,7 +1317,7 @@ Wire Wire Line
 	2075 2925 2100 2925
 Connection ~ 2100 2925
 Wire Wire Line
-	1775 3075 1775 2850
+	1775 2850 1775 3075
 Wire Wire Line
 	1775 2850 2375 2850
 Wire Wire Line
@@ -1339,7 +1341,7 @@ Wire Wire Line
 Wire Wire Line
 	1675 6625 1675 6850
 Wire Wire Line
-	1375 6550 1375 6625
+	1375 6475 1375 6625
 Connection ~ 1375 6625
 Wire Wire Line
 	1775 3050 600  3050
@@ -1427,7 +1429,7 @@ Wire Wire Line
 	2000 4475 2025 4475
 Connection ~ 2025 4475
 Wire Wire Line
-	1700 4625 1700 4400
+	1700 4400 1700 4625
 Wire Wire Line
 	1700 4400 2300 4400
 Wire Wire Line
@@ -1451,9 +1453,7 @@ Wire Wire Line
 Wire Wire Line
 	850  6300 1875 6300
 Wire Wire Line
-	1875 6300 1875 7150
-Wire Wire Line
-	1875 7150 1675 7150
+	1875 6300 1875 6950
 Wire Wire Line
 	1700 4600 950  4600
 Wire Wire Line
@@ -1471,9 +1471,7 @@ Wire Wire Line
 Wire Wire Line
 	1050 6150 1975 6150
 Wire Wire Line
-	1975 6150 1975 6950
-Wire Wire Line
-	1975 6950 1675 6950
+	1975 6150 1975 7150
 Wire Wire Line
 	4150 4175 4150 3475
 Wire Wire Line
@@ -1495,7 +1493,7 @@ Wire Wire Line
 Wire Wire Line
 	1500 1200 1500 1175
 Wire Wire Line
-	1375 1650 1375 1600
+	1375 1600 1375 1650
 Wire Wire Line
 	1150 950  1150 875 
 Connection ~ 1150 875 
@@ -1616,7 +1614,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 1225 3800 1200
 Wire Wire Line
-	3675 1675 3675 1625
+	3675 1575 3675 1675
 Wire Wire Line
 	3450 975  3450 900 
 Connection ~ 3450 900 
@@ -1637,8 +1635,6 @@ Wire Wire Line
 	4450 1225 4450 1250
 Wire Wire Line
 	4450 1250 4425 1250
-Wire Wire Line
-	3675 1650 3675 1575
 Wire Wire Line
 	3675 1575 4300 1575
 Wire Wire Line
@@ -1709,7 +1705,7 @@ Wire Wire Line
 Wire Wire Line
 	4975 1200 4975 1025
 $Comp
-L LED D14
+L LED-RESCUE-ozinverterkicad D14
 U 1 1 57CC6041
 P 4725 1500
 F 0 "D14" H 4725 1600 50  0000 C CNN
@@ -1744,4 +1740,17 @@ Wire Wire Line
 	4975 1350 5075 1350
 Wire Wire Line
 	5075 1350 5075 1025
+Wire Wire Line
+	1875 6950 1675 6950
+Connection ~ 1875 6950
+Wire Wire Line
+	1975 7150 1675 7150
+Wire Wire Line
+	1100 6475 1375 6475
+Connection ~ 1500 7400
+Wire Wire Line
+	1525 7400 1525 7575
+Wire Wire Line
+	1525 7575 1775 7575
+Connection ~ 1525 7400
 $EndSCHEMATC
